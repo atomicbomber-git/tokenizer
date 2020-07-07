@@ -2,15 +2,17 @@
 
 namespace SastrawiTest\Tokenizer\CharAnalyzer;
 
+use PHPUnit\Framework\TestCase;
 use Sastrawi\Tokenizer\CharAnalyzer\Model;
+use Sastrawi\Tokenizer\CharAnalyzer\Punctuation;
 
-class PunctuationTest extends \PHPUnit_Framework_TestCase
+class PunctuationTest extends TestCase
 {
     private $analyzer;
 
-    public function setUp()
+    public function setUp(): void
     {
-        $this->analyzer = new \Sastrawi\Tokenizer\CharAnalyzer\Punctuation();
+        $this->analyzer = new Punctuation();
     }
 
     public function testInstanceOf()

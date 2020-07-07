@@ -2,14 +2,18 @@
 
 namespace SastrawiTest\Tokenizer\Console;
 
+use PHPUnit\Framework\TestCase;
 use Sastrawi\Tokenizer\Console\TokenizeCommand;
 use Sastrawi\Tokenizer\TokenizerFactory;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
 
-class TokenizeCommandTest extends \PHPUnit_Framework_TestCase
+class TokenizeCommandTest extends TestCase
 {
-    public function setUp()
+    private $commandTester;
+    private $command;
+
+    public function setUp(): void
     {
         $this->application = new Application();
 

@@ -2,9 +2,10 @@
 
 namespace SastrawiTest\Tokenizer;
 
+use PHPUnit\Framework\TestCase;
 use Sastrawi\Tokenizer\TokenizerFactory;
 
-class TokenizerFactoryTest extends \PHPUnit_Framework_TestCase
+class TokenizerFactoryTest extends TestCase
 {
     public function testCreateDefaultTokenizer()
     {

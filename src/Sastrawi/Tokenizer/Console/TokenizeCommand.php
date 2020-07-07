@@ -77,6 +77,8 @@ class TokenizeCommand extends Command
         $tokens = $this->tokenizer->tokenize($inputText);
 
         $output->write($this->formatOutput($tokens, $outputFormat));
+
+        return 1;
     }
 
     protected function validateOutputFormat($format)
@@ -98,7 +100,7 @@ class TokenizeCommand extends Command
         }
     }
 
-    public function getSynopsis()
+    public function getSynopsis(bool $short = false): string
     {
         return parent::getSynopsis()."\n\n<comment>Description:</comment>\n ".$this->getDescription();
     }

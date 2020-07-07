@@ -2,15 +2,17 @@
 
 namespace SastrawiTest\Tokenizer\CharAnalyzer;
 
+use PHPUnit\Framework\TestCase;
+use Sastrawi\Tokenizer\CharAnalyzer\Alphanumeric;
 use Sastrawi\Tokenizer\CharAnalyzer\Model;
 
-class AlphanumericTest extends \PHPUnit_Framework_TestCase
+class AlphanumericTest extends TestCase
 {
     private $analyzer;
 
-    public function setUp()
+    public function setUp(): void
     {
-        $this->analyzer = new \Sastrawi\Tokenizer\CharAnalyzer\Alphanumeric();
+        $this->analyzer = new Alphanumeric();
     }
 
     public function testInstanceOf()

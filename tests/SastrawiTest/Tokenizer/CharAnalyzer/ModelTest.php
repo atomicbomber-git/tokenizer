@@ -2,13 +2,14 @@
 
 namespace SastrawiTest\Tokenizer\CharAnalyzer;
 
+use PHPUnit\Framework\TestCase;
 use Sastrawi\Tokenizer\CharAnalyzer\Model;
 
-class ModelTest extends \PHPUnit_Framework_TestCase
+class ModelTest extends TestCase
 {
     private $model;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->model = new Model('text', 2);
     }

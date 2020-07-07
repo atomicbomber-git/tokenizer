@@ -2,15 +2,17 @@
 
 namespace SastrawiTest\Tokenizer\CharAnalyzer;
 
+use PHPUnit\Framework\TestCase;
 use Sastrawi\Tokenizer\CharAnalyzer\Model;
+use Sastrawi\Tokenizer\CharAnalyzer\Whitespace;
 
-class WhitespaceTest extends \PHPUnit_Framework_TestCase
+class WhitespaceTest extends TestCase
 {
     private $analyzer;
 
-    public function setUp()
+    public function setUp(): void
     {
-        $this->analyzer = new \Sastrawi\Tokenizer\CharAnalyzer\Whitespace();
+        $this->analyzer = new Whitespace();
     }
 
     public function testInstanceOf()
